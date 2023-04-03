@@ -76,8 +76,7 @@ class Main {
     } catch (IOException e) {
       System.err.println("Error reading prefix definition from file: " + e.getMessage());
     }
-    int pdefindex = random.nextInt(prefix_def.size());
-    String pdef = prefix_def.get(pdefindex);
+    String pdef = prefix_def.get(preindex);
 
 
       ArrayList<String> root_def = new ArrayList<String>();
@@ -92,8 +91,7 @@ class Main {
     } catch (IOException e) {
       System.err.println("Error reading root definition from file: " + e.getMessage());
     }
-    int rdefindex = random.nextInt(root_def.size());
-    String rdef = prefix_def.get(rdefindex);
+    String rdef = root_def.get(rootindex);
 
 
       ArrayList<String> suffix_def = new ArrayList<String>();
@@ -108,8 +106,7 @@ class Main {
     } catch (IOException e) {
       System.err.println("Error reading suffix definition from file: " + e.getMessage());
     }
-    int sdefindex = random.nextInt(prefix_def.size());
-    String sdef = prefix_def.get(sdefindex);
+    String sdef = suffix_def.get(sufindex);
 
    System.out.println(pre + "-" + root + "-" + suf + "\nDefinition: " + pdef + " " + rdef + " " + sdef);
 
