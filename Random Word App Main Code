@@ -1,0 +1,85 @@
+FileReader("root.txt"));
+      String line = reader.readLine();
+      while (line!= null) {
+        rootword.add(line);
+        line = reader.readLine();
+      }
+      reader.close();
+    } catch (IOException e) {
+      System.err.println("Error reading root from file: " + e.getMessage());
+    }
+    int rootindex = random.nextInt(rootword.size());
+    String root = rootword.get(rootindex);
+
+
+    ArrayList<String> suffix = new ArrayList<String>();
+    try {
+      BufferedReader reader = new BufferedReader(new FileReader("suffix.txt"));
+      String line = reader.readLine();
+      while (line!= null) {
+        suffix.add(line);
+        line = reader.readLine();
+      }
+      reader.close();
+    } catch (IOException e) {
+      System.err.println("Error reading suffix from file: " + e.getMessage());
+    }
+    int sufindex = random.nextInt(suffix.size());
+    String suf = suffix.get(sufindex);
+
+
+      ArrayList<String> prefix_def = new ArrayList<String>();
+    try {
+      BufferedReader reader = new BufferedReader(new FileReader("prefix_def.txt"));
+      String line = reader.readLine();
+      while (line!= null) {
+        prefix_def.add(line);
+        line = reader.readLine();
+      }
+      reader.close();
+    } catch (IOException e) {
+      System.err.println("Error reading prefix definition from file: " + e.getMessage());
+    }
+    int pdefindex = random.nextInt(prefix_def.size());
+    String pdef = prefix_def.get(pdefindex);
+
+
+      ArrayList<String> root_def = new ArrayList<String>();
+    try {
+      BufferedReader reader = new BufferedReader(new FileReader("root_def.txt"));
+      String line = reader.readLine();
+      while (line!= null) {
+        root_def.add(line);
+        line = reader.readLine();
+      }
+      reader.close();
+    } catch (IOException e) {
+      System.err.println("Error reading root definition from file: " + e.getMessage());
+    }
+    int rdefindex = random.nextInt(root_def.size());
+    String rdef = prefix_def.get(rdefindex);
+
+
+      ArrayList<String> suffix_def = new ArrayList<String>();
+    try {
+      BufferedReader reader = new BufferedReader(new FileReader("suffix_def.txt"));
+      String line = reader.readLine();
+      while (line!= null) {
+        suffix_def.add(line);
+        line = reader.readLine();
+      }
+      reader.close();
+    } catch (IOException e) {
+      System.err.println("Error reading suffix definition from file: " + e.getMessage());
+    }
+    int sdefindex = random.nextInt(prefix_def.size());
+    String sdef = prefix_def.get(sdefindex);
+
+   System.out.println(pre + "-" + root + "-" + suf + "\nDefinition: " + pdef + " " + rdef + " " + sdef);
+
+      
+      wordfin++;
+  }
+  scan.close();
+  }
+}
