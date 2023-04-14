@@ -7,4 +7,4 @@
 # Updates
 ## Board and panel (rough) implemented
 ## Indicidual piece images
-## Beginning work on piece functionality
+## Beginning work on piece functionality- Isaac W,
